@@ -1,4 +1,4 @@
-###ch02-di-xml:在spring的配置文件中，给java对象的属性赋值
+### ch02-di-xml:在spring的配置文件中，给java对象的属性赋值
 
 > di:依赖注入——表示创建对象，给属性赋值
 
