@@ -6,10 +6,12 @@ public class Student {
     private int age;
 
     public void setName(String name) {
+        System.out.println("setName=" + name);
         this.name = name;
     }
 
     public void setAge(int age) {
+        System.out.println("setAge=" + age);
         this.age = age;
     }
 
