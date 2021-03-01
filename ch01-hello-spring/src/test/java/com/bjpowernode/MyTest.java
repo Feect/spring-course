@@ -8,6 +8,8 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.Date;
+
 
 public class MyTest
 {
@@ -22,6 +24,7 @@ public class MyTest
 
     /**
      * spring默认创建对象的时间：在创建spring的容器时，会创建配置文件中的所有对象
+     * spring创建对象：默认调用的是无参数构造方法
      */
     @Test
     public void test02(){
@@ -55,5 +58,17 @@ public class MyTest
         for (String name : names) {
             System.out.println(name);
         }
+    }
+
+
+    /**
+     *  获取一个非自定义类的对象
+     */
+    @Test
+    public void test04(){
+        String config = "beans.xml";
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(config);
+        Date date = (Date) applicationContext.getBean("mydate");
+        System.out.println("Date:" + date);
     }
 }

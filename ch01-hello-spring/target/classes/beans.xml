@@ -12,9 +12,14 @@
     spring是把创建好的对象放入map中，spring框架有一个map存放对象的
     springMap.put(id的值,对象);
     例如：springMap.put("someService",new SomeServiceImpl());
+
+    一个bean标签声明一个对象
     -->
 
     <bean id="someService" class="com.bjpowernode.service.impl.SomeServiceImpl"/>
+
+    <!---->
+    <bean id="mydate" class="java.util.Date"/>
 
 </beans>
 
