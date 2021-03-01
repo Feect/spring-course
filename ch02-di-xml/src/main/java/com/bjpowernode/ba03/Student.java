@@ -1,13 +1,27 @@
-package com.bjpowernode.ba01;
+package com.bjpowernode.ba03;
 
 public class Student {
 
     private String name;
     private int age;
 
+    //声明一个引用类型
+    private School school;
+
+
     public Student() {
-        System.out.println("spring会调用类的无参数构造方法创建对象");
     }
+    /*
+    创建一个有参构造方法
+     */
+    public Student(String myName,int myAge,School mySchool){
+        System.out.println("=========student()有参数构造方法=========");
+        this.name = myName;
+        this.age = myAge;
+        this.school = mySchool;
+    }
+
+
 
     /*
     必须有set方法，没有set方法报错如下信息
@@ -15,17 +29,15 @@ public class Student {
      */
 
     public void setName(String name) {
-        System.out.println("setName=" + name);
         this.name = name;
     }
 
     public void setAge(int age) {
-        System.out.println("setAge=" + age);
         this.age = age;
     }
 
-    public void setEmail(String email){
-        System.out.println("email=" + email);
+    public void setSchool(School school) {
+        this.school = school;
     }
 
     @Override
@@ -33,6 +45,7 @@ public class Student {
         return "Student{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", school=" + school +
                 '}';
     }
 }

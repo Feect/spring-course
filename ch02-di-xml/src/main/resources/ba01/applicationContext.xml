@@ -17,6 +17,11 @@
     <bean id="mystudent" class="com.bjpowernode.ba01.Student">
         <property name="name" value="李四"/><!--setName("李四")-->
         <property name="age" value="21"/><!--setAge(21)-->
+        <property name="email" value="lisi@qq.com"/><!--setEmail("lisi@qq.com")-->
+    </bean>
+
+    <bean id="myDate" class="java.util.Date">
+        <property name="time" value="20210301"/>
     </bean>
 
 </beans>

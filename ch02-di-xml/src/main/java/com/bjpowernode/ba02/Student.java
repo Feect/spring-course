@@ -1,9 +1,12 @@
-package com.bjpowernode.ba01;
+package com.bjpowernode.ba02;
 
 public class Student {
 
     private String name;
     private int age;
+
+    //声明一个引用类型
+    private School school;
 
     public Student() {
         System.out.println("spring会调用类的无参数构造方法创建对象");
@@ -24,6 +27,11 @@ public class Student {
         this.age = age;
     }
 
+    public void setSchool(School school) {
+        System.out.println("setSchool=" + school);
+        this.school = school;
+    }
+
     public void setEmail(String email){
         System.out.println("email=" + email);
     }
@@ -33,6 +41,7 @@ public class Student {
         return "Student{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", school=" + school +
                 '}';
     }
 }
